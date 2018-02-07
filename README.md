@@ -16,7 +16,8 @@ For one to get started with the application you need to clone using the below co
 Then `$ cd patient-dashboard` to get into the directory  
 
 Run the following commands to :
- `$ npm start` :
+
+#### `$ npm start` :
 
   Runs the app in the development mode.<br>
   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -24,12 +25,12 @@ Run the following commands to :
   The page will reload if you make edits.<br>
   You will also see any lint errors in the console.
 
- ` $ npm test`
+#### ` $ npm test`
 
   Launches the test runner in the interactive watch mode.<br>
   See the section about [running tests](#running-tests) for more information.
 
- `$ npm run build`
+#### `$ npm run build`
 
   Builds the app for production to the `build` folder.<br>
   It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -39,7 +40,7 @@ Run the following commands to :
 
   See the section about [deployment](#deployment) for more information.
 
- `$ npm run eject`
+#### `$ npm run eject`
 
   **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -336,22 +337,6 @@ Now offers a zero-configuration single-command deployment. You can use `now` to 
     Paste that URL into your browser when the build is complete, and you will see your deployed app.
 
 Details are available in [this article.](https://zeit.co/blog/unlimited-static)
-
-### [S3](https://aws.amazon.com/s3) and [CloudFront](https://aws.amazon.com/cloudfront/)
-
-See this [blog post](https://medium.com/@omgwtfmarc/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af) on how to deploy your React app to Amazon Web Services S3 and CloudFront.
-
-### [Surge](https://surge.sh/)
-
-Install the Surge CLI if you haven’t already by running `npm install -g surge`. Run the `surge` command and log in you or create a new account.
-
-When asked about the project path, make sure to specify the `build` folder, for example:
-
-```sh
-       project path: /path/to/project/build
-```
-
-Note that in order to support routers that use HTML5 `pushState` API, you may want to rename the `index.html` in your build folder to `200.html` before deploying to Surge. This [ensures that every URL falls back to that file](https://surge.sh/help/adding-a-200-page-for-client-side-routing).
 
 ## Built With
 
