@@ -1,41 +1,53 @@
-## Installations
+## Patient DashBoard
+This application helps patients with chronic disease ability to book appointments with their Doctors and on the Doctor's side She/He is able to keep track of the patients medical history and Documentation. The application will also offer the users (Patient and Doctor) ability to chat in realtime to improve communication.Apart from live chat we decided to intergrate SMS to the application to put into consideration people from rural area.
 
-## Available Scripts
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-In the project directory, you can run:
+## Prerequisites
+**You’ll need to have Node >= 6 on your local development machine** (but it’s not required on the server). You can use [nvm](https://github.com/creationix/nvm#installation) (macOS/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) to easily switch Node versions between different projects.
 
-### `npm start`
+### Installations
+For one to get started with the application you need to clone using the below command
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+ $ git clone https://github.com/toelapiut/patient-dashboard.git
+```
+Then `$ cd patient-dashboard` to get into the directory  
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Run the following commands to :
+ `$ npm start` :
 
-### `npm test`
+  Runs the app in the development mode.<br>
+  Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
+  The page will reload if you make edits.<br>
+  You will also see any lint errors in the console.
 
-### `npm run build`
+ ` $ npm test`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  Launches the test runner in the interactive watch mode.<br>
+  See the section about [running tests](#running-tests) for more information.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+ `$ npm run build`
 
-See the section about [deployment](#deployment) for more information.
+  Builds the app for production to the `build` folder.<br>
+  It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### `npm run eject`
+  The build is minified and the filenames include the hashes.<br>
+  Your app is ready to be deployed!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  See the section about [deployment](#deployment) for more information.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ `$ npm run eject`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+  Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+  You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 
 ## Running Tests
@@ -50,34 +62,6 @@ Jest is a Node-based runner. This means that the tests always run in a Node envi
 While Jest provides browser globals such as `window` thanks to [jsdom](https://github.com/tmpvar/jsdom), they are only approximations of the real browser behavior. Jest is intended to be used for unit tests of your logic and your components rather than the DOM quirks.
 
 We recommend that you use a separate tool for browser end-to-end tests if you need them. They are beyond the scope of Create React App.
-
-### Filename Conventions
-
-Jest will look for test files with any of the following popular naming conventions:
-
-* Files with `.js` suffix in `__tests__` folders.
-* Files with `.test.js` suffix.
-* Files with `.spec.js` suffix.
-
-The `.test.js` / `.spec.js` files (or the `__tests__` folders) can be located at any depth under the `src` top level folder.
-
-We recommend to put the test files (or `__tests__` folders) next to the code they are testing so that relative imports appear shorter. For example, if `App.test.js` and `App.js` are in the same folder, the test just needs to `import App from './App'` instead of a long relative path. Colocation also helps find tests more quickly in larger projects.
-
-### Command Line Interface
-
-When you run `npm test`, Jest will launch in the watch mode. Every time you save a file, it will re-run the tests, just like `npm start` recompiles the code.
-
-The watcher includes an interactive command-line interface with the ability to run all tests, or focus on a search pattern. It is designed this way so that you can keep it open and enjoy fast re-runs. You can learn the commands from the “Watch Usage” note that the watcher prints after every run:
-
-![Jest watch mode](http://facebook.github.io/jest/img/blog/15-watch.gif)
-
-### Version Control Integration
-
-By default, when you run `npm test`, Jest will only run the tests related to files changed since the last commit. This is an optimization designed to make your tests run fast regardless of how many tests you have. However it assumes that you don’t often commit the code that doesn’t pass the tests.
-
-Jest will always explicitly mention that it only ran tests related to the files changed since the last commit. You can also press `a` in the watch mode to force Jest to run all tests.
-
-Jest will always run all tests on a [continuous integration](#continuous-integration) server or if the project is not inside a Git or Mercurial repository.
 
 ### Writing Tests
 
@@ -97,6 +81,7 @@ it('sums numbers', () => {
 All `expect()` matchers supported by Jest are [extensively documented here](https://facebook.github.io/jest/docs/en/expect.html#content).<br>
 You can also use [`jest.fn()` and `expect(fn).toBeCalled()`](https://facebook.github.io/jest/docs/en/expect.html#tohavebeencalled) to create “spies” or mock functions.
 
+## Deployment
 
 ### [Azure](https://azure.microsoft.com/)
 
@@ -367,3 +352,25 @@ When asked about the project path, make sure to specify the `build` folder, for 
 ```
 
 Note that in order to support routers that use HTML5 `pushState` API, you may want to rename the `index.html` in your build folder to `200.html` before deploying to Surge. This [ensures that every URL falls back to that file](https://surge.sh/help/adding-a-200-page-for-client-side-routing).
+
+## Built With
+
+* [ReactJS](https://reactjs.org/) - The Front End framework used
+* [Django](https://www.djangoproject.com/) - The BackEnd framework used
+* [NPM](https://www.npmjs.com/) - Dependency Management
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https:) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+* **Apiut Toel** 
+
+See also the list of [contributors](https://github.com/patient-dashboard/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+
