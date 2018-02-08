@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
@@ -10,9 +12,26 @@
     "uikit": "^3.0.0-beta.39"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This application helps patients with chronic disease ability to book appointments with their Doctors and on the Doctor's side She/He is able to keep track of the patients medical history and Documentation. The application will also offer the users (Patient and Doctor) ability to chat in realtime to improve communication.Apart from live chat we decided to intergrate SMS to the application to put into consideration people from rural area.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toelapiut/patient-dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toelapiut/patient-dashboard/issues"
+  },
+  "homepage": "https://github.com/toelapiut/patient-dashboard#readme"
 }
